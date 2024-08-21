@@ -12,7 +12,7 @@ export class TutorialsListComponent implements OnInit {
   currentTutorial: Tutorial = {};
   currentIndex = -1;
   title = '';
-  message = {message: '', date: ''}
+  message = {message: '', date: '', result: []}
 
   constructor(private tutorialService: TutorialService) {}
 
@@ -25,7 +25,7 @@ export class TutorialsListComponent implements OnInit {
       next: (data) => {
         //this.tutorials = data;
         this.message = data
-        console.log(data);
+        console.log("return", data);
       },
       error: (e) => console.error(e)
     });
